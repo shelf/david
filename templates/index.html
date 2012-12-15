@@ -15,7 +15,7 @@
                 </article>
                 <div class="divider"></div>
         {% elif loop.index < 20 %}
-            <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+            <h3><a class="old-titles" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
         {% endif %}
     {% endfor %}
 {% endblock %}

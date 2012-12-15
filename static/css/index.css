@@ -235,6 +235,10 @@ b {
     color: #222;
 }
 
+.old-titles {
+    font-family: Source Sans Pro;
+    font-weight: bold;
+}
 
 #inner {
     padding-left: 30px;
@@ -278,15 +282,13 @@ b {
     height: 50px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -12px;
-    padding-top: 10px;
+    padding-top: 4px;
     z-index: 50;
-    padding-bottom: 22px;
+    padding-bottom: 8px;
 }
 
 #foot-text {
     width: 640px;
-    height: 40px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
