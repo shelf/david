@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
     <meta name="author" content="{{ AUTHOR }}" />
-    <meta name="keywords" content="{{ tags }}" />
+    <meta name="keywords" content="{% for tag, null in tags %} {{ tag }},{% endfor %}"/>
     <meta name="description" content="" />
     <link href="{{ SITEURL }}/theme/css/index.css" rel="stylesheet" />
     <link rel="shortcut icon" href="{{ SITEURL }}/static/favicon.ico" type="image/x-icon" />
@@ -77,12 +77,12 @@
                 {% endif %}
             </aside>
         </div>
-        <div class="foot-divider"></div>
-        <footer id="footer">
-            <div id="foot-text">
-                <p><b>{{ SITENAME }}</b>, a weblog by <b>{{ AUTHOR }}</b></p>
-            </div>
-        </footer>
     </div>
+    <div class="foot-divider"></div>
+    <footer id="footer">
+        <div id="foot-text">
+            <p><b>{{ SITENAME }}</b>, a weblog by <b>{{ AUTHOR }}</b></p>
+        </div>
+    </footer>
 </body>
 </html>
