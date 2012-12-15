@@ -201,6 +201,10 @@ b {
     width: 100%;
 }
 
+#sidebar h3 {
+    text-transform: capitalize;
+}
+
 #sidebar iframe {
     width: 200px;
     height: 142px;
@@ -299,4 +303,11 @@ b {
 
 #footer a,a:visited,a:hover,a:active {
     color: Gray;
+}
+
+.codehilite {
+    width: 620px;
+    overflow: scroll;
+    word-wrap: break-words;
+    font-family: Monaco, monospace;
 }

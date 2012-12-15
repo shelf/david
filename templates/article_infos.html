@@ -1,10 +1,10 @@
 {% if article %}
     <p><b>{{ article.locale_date }}</b>
     {% if article.author %}
-     by <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+    by <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+    {% endif %}
+    {% if article.category %}
+     in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
     {% endif %}
     </p>
-    {% if article.category %}
-    <p>Posted in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
-    {% endif %}
 {% endif %}
