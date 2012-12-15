@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <meta name="author" content="{{ AUTHOR }}" />
+    <meta name="keywords" content="{{ tags }}" />
+    <meta name="description" content="" />
+    <link href="{{ SITEURL }}/theme/css/index.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{ SITEURL }}/static/favicon.ico" type="image/x-icon" />
+    {% if FEED_RSS %}
+        <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,900,300,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css' />
+
+</head>
+<body id="index" class="home">
+    <div class="topbar" id="topbar">
+        <div id="topbar-inner" class="topbar-inner">
+            <div class="container">
+                <nav>
+                    {% if SITE_LOGO %} <img src="{{ SITE_LOGO }}"> {% endif %}
+                    <a href="{{ SITEURL }}">{{ SITENAME }}</a>
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                        {% for page in PAGES %}
+                            <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+                        {% endfor %}
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div id="stripe"></div>
+    <div id="main">
+        {% if categories|length > 1 or tags|length > 1 %}
+            <div id="tags">
+                {% for cat, null in categories %}
+                    <a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} class="curcat"{% endif %}>{{ cat }}</a>
+                {% endfor %}
+                {% for t, null in tags %}
+                    <a href="{{ SITEURL }}/{{ t.url }}">{{ t }}</a>
+                {% endfor %}
+            </div>
+        {% elif SITESUBTITLE %} 
+            <div id="tags">
+                {{ SITESUBTITLE }}
+            </div>
+        {% endif %}
+        <div id="document">
+            {% block headline %}
+            {% endblock %}
+            <div id="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <aside id="sidebar">
+                <h3>About</h3>
+                {% if USERPIC %}
+                    <img src="{{ SITEURL }}/static/images/{{ USERPIC }}" />
+                {% endif %}
+                {% if ABOUT %}
+                    <p>{{ ABOUT }}</p>
+                {% endif %}
+                {% if SOCIAL %}
+                    <h3>Connect</h3>
+                    {% if GITHUB_USER %}
+                        <iframe src="http://githubbadge.appspot.com/badge/{{ GITHUB_USER }}?a=0" frameBorder=0></iframe>
+                    {% endif %}
+                {% endif %}
+                {% if BLOGROLL|length > 0 %}
+                    {% for link, null in BLOGROLL %}
+                        <p><a href="{{ link }}"></a></p>
+                    {% endfor %}
+                {% endif %}
+            </aside>
+        </div>
+        <div class="foot-divider"></div>
+        <footer id="footer">
+            <div id="foot-text">
+                <p><b>{{ SITENAME }}</b>, a weblog by <b>{{ AUTHOR }}</b></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
