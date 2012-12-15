@@ -24,6 +24,11 @@
                 <nav>
                     {% if SITE_LOGO %} <img src="{{ SITE_LOGO }}"> {% endif %}
                     <a href="{{ SITEURL }}">{{ SITENAME }}</a>
+                    {% if LINKS %}
+                        {% for name,link in LINKS %}
+                            <a href="{{ link }}">{{ name }}</a>
+                        {% endfor %}
+                    {% endif %}
                     {% if DISPLAY_PAGES_ON_MENU %}
                         {% for page in PAGES %}
                             <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
@@ -58,7 +63,7 @@
             </div>
             <aside id="sidebar">
                 {% if ABOUT %}
-                <h3>About{% if AUTHOR %} {{ AUTHOR }}{% endif %}</h3>
+                <h3>About</h3>
                 {% if USERPIC %}
                     <img src="{{ SITEURL }}/static/images/{{ USERPIC }}" />
                 {% endif %}
