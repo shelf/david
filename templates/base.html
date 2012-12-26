@@ -38,22 +38,12 @@
             </div>
         </div>
     </div>
-    <div id="stripe"></div>
+    <div id="stripe">
+       {% for cat, null in categories %}
+       <a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} class="curcat"{% endif %}>{{ cat }}</a>
+   {% endfor %}
+    </div>
     <div id="main">
-        {% if categories|length > 1 or tags|length > 1 %}
-            <div id="tags">
-                {% for cat, null in categories %}
-                    <a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} class="curcat"{% endif %}>{{ cat }}</a>
-                {% endfor %}
-                {% for t, null in tags %}
-                    <a href="{{ SITEURL }}/{{ t.url }}">{{ t }}</a>
-                {% endfor %}
-            </div>
-        {% elif SITESUBTITLE %} 
-            <div id="tags">
-                {{ SITESUBTITLE }}
-            </div>
-        {% endif %}
         <div id="document">
             {% block headline %}
             {% endblock %}
@@ -80,6 +70,14 @@
                     {% if GITHUB_USER %}
                         <iframe src="http://githubbadge.appspot.com/badge/{{ GITHUB_USER }}?a=0" frameBorder=0></iframe>
                     {% endif %}
+                {% endif %}
+                {% if tags|length > 1 %}
+                    <div id="tags">
+
+                    {% for t, null in tags %}
+                        <a href="{{ SITEURL }}/{{ t.url }}">{{ t }}</a>
+                    {% endfor %}
+                    </div>
                 {% endif %}
                 {% if BLOGROLL|length > 0 %}
                     <h3>Blogroll</h3>

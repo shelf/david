@@ -84,27 +84,6 @@ b {
     border-color: LightGray;
 }
 
-#tags {
-    z-index: 998;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: #222;
-    color: #C0C0C0;
-    font-family: Arial, sans-serif;
-    text-transform: lowercase;
-    font-variant:small-caps;
-    text-align: center;
-    overflow: hidden;
-}
-
-#tags a, a:hover, a:visited, a:active {
-    text-decoration: none;
-    color: #C0C0C0;
-}
-
-
 .container {
     position: relative;
 }
@@ -126,6 +105,11 @@ b {
     border-left: 1px solid;
     border-right: 1px solid;
     border-color: LightGray;
+}
+
+#stripe a {
+    font-family: Merriweather, Times New Roman, sans-serif;
+    text-decoration: underline;
 }
 
 #topbar a {
