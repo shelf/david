@@ -38,12 +38,12 @@
             </div>
         </div>
     </div>
+    <div id="stripe"></div>
     <div id="cats">
        {% for cat, null in categories %}
        <a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} class="curcat"{% endif %}>{{ cat }}</a>
    {% endfor %}
     </div>
-    <div id="stripe"></div>
     <div id="main">
         <div id="document">
             {% block headline %}
