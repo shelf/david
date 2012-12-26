@@ -97,7 +97,7 @@ b {
     width: 980px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #353535;
+    background-color: #222;
     border-left: 1px solid;
     border-right: 1px solid;
     border-color: LightGray;
@@ -121,6 +121,7 @@ b {
     font-family: Merriweather, Times New Roman, sans-serif;
     text-decoration: underline;
     color: #C0C0C0;
+    font-size: 0.8em;
     text-decoration: underline;
     padding-left: 9px;
     padding-right: 9px;
