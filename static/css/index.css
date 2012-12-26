@@ -58,33 +58,37 @@ b {
 
 #topbar-inner {
     width: 980px;
-    margin-top: 9px;
+    height: 22px;
+    padding-bottom: 9px;
+    padding-top: 9px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom:22px;
+    background-color: rgba(2, 2, 2, 0.6);
+    z-index: 1000;
 }
 
+
 #topbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 0px;
-    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
     color: #FFFFFF;
-    height: 38px;
+    height: 300px;
     background-color: #222;
     color: rgba(1, 1, 1, 0.8);
+    background-image: url('../../static/banner.jpg');
     overflow: hidden;
-    z-index: 999;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-color: LightGray;
 }
 
 #tags {
-    position: fixed;
     z-index: 998;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 22px;
     width: 100%;
     background-color: #222;
     color: #C0C0C0;
@@ -111,14 +115,17 @@ b {
 }
 
 #stripe {
-    position: fixed;
-    width: 100%;
-    top: 38px;
-    left: 0;
-    right: 0;
+    width: 980px;
+    top: 300px;
+    margin-left: auto;
+    margin-right:auto ;
     height: 4px;
-    background-color: #66a8ef;
+/*    background-color: #66a8ef;*/
+    background-color: #353535;
     z-index: 1000;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-color: LightGray;
 }
 
 #topbar a {
@@ -176,7 +183,7 @@ b {
     margin: 0;
 }
 
-#topbar img {
+#topbar-inner img {
     float: left;
     height: 30px;
     width: auto;
