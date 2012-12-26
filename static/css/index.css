@@ -92,15 +92,6 @@ b {
     right: 0px;
 }
 
-#cats {
-    width: 980px;
-    margin-left: auto;
-    margin-right: auto;
-    border-left: 1px solid;
-    border-right: 1px solid;
-    border-color: LightGray;
-}
-
 #stripe {
     width: 980px;
     top: 300px;
@@ -113,16 +104,6 @@ b {
     border-left: 1px solid;
     border-right: 1px solid;
     border-color: LightGray;
-}
-
-#cats a, a:hover, a:active, a:visited {
-    font-family: Merriweather, Times New Roman, sans-serif;
-    text-decoration: underline;
-    color: #66a8ef;
-    font-size: 0.8em;
-    text-decoration: underline;
-    padding-left: 9px;
-    padding-right: 9px;
 }
 
 #topbar a {
@@ -217,7 +198,6 @@ b {
 #content {
     display: inline-block;
     vertical-align: top;
-    padding-bottom: 46px;
     width: 620px;
     line-height: 1.2em;
 }
@@ -289,7 +269,7 @@ b {
     margin-right: auto;
     padding-top: 4px;
     z-index: 50;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
 }
 
 #foot-text {
