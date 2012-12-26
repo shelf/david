@@ -93,6 +93,16 @@ b {
     right: 0px;
 }
 
+#cats {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #353535;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-color: LightGray;
+}
+
 #stripe {
     width: 980px;
     top: 300px;
@@ -107,9 +117,13 @@ b {
     border-color: LightGray;
 }
 
-#stripe a {
+#cats a, a:hover, a:active, a:visited {
     font-family: Merriweather, Times New Roman, sans-serif;
     text-decoration: underline;
+    color: #C0C0C0;
+    text-decoration: underline;
+    padding-left: 9px;
+    padding-right: 9px;
 }
 
 #topbar a {
