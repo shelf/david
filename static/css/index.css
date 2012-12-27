@@ -29,7 +29,7 @@ b {
 
 #main {
     padding-top: 0px;
-    padding-bottom: 0;
+    padding-bottom: 15px;
     margin-bottom: 0;
     width: 980px;
     min-height: 100%;
@@ -211,13 +211,17 @@ b {
     padding-bottom: 28px;
 }
 
+.hline {
+    color: #353535 !important;
+}
+
 .entry-title {
     color: #171717 !important;
     line-height: 1.2em;
 }
 
 .entry-title a, a:visited, a:hover, a:active {
-    color: #222;
+    color: #353535;
 }
 
 .old-titles {
@@ -290,4 +294,10 @@ b {
     overflow: scroll;
     word-wrap: break-words;
     font-family: Monaco, monospace;
+}
+
+.date {
+    font-family: Monaco, monospace;
+    font-size: 0.8em;
+    padding-right: 15px;
 }

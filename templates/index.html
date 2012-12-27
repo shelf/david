@@ -13,9 +13,11 @@
                 <article>
                     {{ article.content }}
                 </article>
-                <div class="divider"></div>
         {% elif loop.index < 20 %}
             <h3><a class="old-titles" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+        {% endif %}
+        {% if loop.index < 4 and article != articles[-1] %}
+            <div class="divider"></div>
         {% endif %}
     {% endfor %}
 {% endblock %}
@@ -24,7 +26,7 @@
 {% for article in articles %}
 {% if loop.index == 1 %}
         <div id="byline">
-            <h1>{{ article.title }}</h1>
+          <h1><a class="hline" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
             {% include 'article_infos.html' %}
         </div>
 {% endif %}
