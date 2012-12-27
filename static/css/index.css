@@ -213,6 +213,7 @@ b {
 
 .entry-title {
     color: #171717 !important;
+    line-height: 1.2em;
 }
 
 .entry-title a, a:visited, a:hover, a:active {
