@@ -120,7 +120,6 @@ b {
 }
 
 .active {
-    font-weight: bold;
     color: #FFF;
 }
 
@@ -146,6 +145,9 @@ b {
     text-decoration: none;
 }
 
+article {
+    padding-bottom: 12px;
+}
 
 #topbar h3 {
     margin-top: 0px;
@@ -221,6 +223,11 @@ b {
 
 .entry-title a, a:visited, a:hover, a:active {
     color: #353535;
+}
+
+.index-title {
+    padding-top: 36px;
+    padding-bottom: 28px;
 }
 
 .old-titles {

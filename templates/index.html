@@ -6,8 +6,10 @@
             <h2>Older articles</h2>
         {% endif %}
         {% if loop.index < 4  and loop.index > 1 %}
+            <div class="index-title">
                 <h1><a class="entry-title" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
                 {% include 'article_infos.html' %}
+            </div>
         {% endif %}
         {% if loop.index < 4 %}
                 <article>

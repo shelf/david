@@ -11,10 +11,11 @@
     {% if FEED_RSS %}
         <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
-
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,900,300,700' rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css' />
+    {% if GOOGLEFONTS %}
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Bitter:700|Merriweather' rel='stylesheet' type='text/css' />
+    {% else %}
+    <link href="{{ SITEURL }}/theme/css/fonts.css" rel="stylesheet" type="text/css" />
+    {% endif %}
 
 </head>
 <body id="index" class="home">
@@ -24,8 +25,8 @@
                 <nav>
                     {% if SITE_LOGO %} <img src="{{ SITE_LOGO }}"> {% endif %}
                     <a href="{{ SITEURL }}">{{ SITENAME }}</a>
-                    {% if LINKS %}
-                        {% for name,link in LINKS %}
+                    {% if SITES %}
+                        {% for name,link in SITES %}
                             <a href="{{ link }}">{{ name }}</a>
                         {% endfor %}
                     {% endif %}
@@ -55,7 +56,7 @@
                 {% endif %}
                     <p>{{ ABOUT }}</p>
                 {% endif %}
-                <p><a href="{{ SITEURL }}/archives.html">Archive</a></p>
+                <p><a href="{{ SITEURL }}/archives.html">Article list</a></p>
                 <p><a href="{{ SITEURL }}/categories.html">Categories</a></p>
                 <p><a href="{{ SITEURL }}/tags.html">Tags</a></p>
                 {% if SOCIAL %}
@@ -73,9 +74,9 @@
                         <a href="{{ SITEURL }}/{{ t.url }}">{{ t }}</a>
                     {% endfor %}
                 {% endif %}
-                {% if BLOGROLL|length > 0 %}
+                {% if LINKS|length > 0 %}
                     <h3>Blogroll</h3>
-                    {% for name,link in BLOGROLL %}
+                    {% for name,link in LINKS %}
                     <p><a href="{{ link }}">{{ name }}</a></p>
                     {% endfor %}
                 {% endif %}
