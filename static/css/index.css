@@ -149,6 +149,11 @@ article {
     padding-bottom: 12px;
 }
 
+article img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #topbar h3 {
     margin-top: 0px;
     margin: 0;
