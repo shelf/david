@@ -150,10 +150,12 @@ article {
 }
 
 article img {
-    max-width: 80%;
+    display: block;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin: 0 auto;
+    padding-top: 36px;
+    padding-bottom: 36px;
 }
 
 #topbar h3 {
