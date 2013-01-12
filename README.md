@@ -22,3 +22,6 @@ A number of additional variables can be set for this theme. Most of these relate
 `ABOUT` - Raw html string for the About paragraph in the sidebar.
 
 `BANNER` - Absolute path to a banner image. Uses `./theme/static/banner.jpg` if unset.
+
+`FAVICON` - Absolute path to a favicon. Defaults to
+|filename|/static/favicon.ico if unset.

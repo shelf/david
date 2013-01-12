@@ -7,7 +7,11 @@
     <meta name="keywords" content="{% for tag, null in tags %} {{ tag }},{% endfor %}"/>
     <meta name="description" content="" />
     <link href="{{ SITEURL }}/theme/css/index.css" rel="stylesheet" />
+    {% if FAVICON %}
+    <link rel="shortcut icon" href="{{ FAVICON }}" type="image/x-icon" />
+    {% else %}
     <link rel="shortcut icon" href="{{ SITEURL }}/static/favicon.ico" type="image/x-icon" />
+    {% endif %}
     {% if FEED_RSS %}
         <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
