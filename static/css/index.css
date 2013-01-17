@@ -305,13 +305,12 @@ article img {
 }
 
 pre {
-    word-wrap: break-words;
+    overflow: auto;
 }
 
 .codehilite {
     width: 620px;
     overflow: auto;
-    word-wrap: break-words;
     font-family: Monaco, monospace;
 }
 
