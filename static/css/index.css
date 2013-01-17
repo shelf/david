@@ -304,9 +304,13 @@ article img {
     color: Gray;
 }
 
+pre {
+    word-wrap: break-words;
+}
+
 .codehilite {
     width: 620px;
-    overflow: scroll;
+    overflow: auto;
     word-wrap: break-words;
     font-family: Monaco, monospace;
 }
