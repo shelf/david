@@ -315,6 +315,12 @@ pre {
     font-family: Monaco, monospace;
 }
 
+blockquote {
+    padding-right: 36px;
+    font-family: Merriweather, sans-serif, Times New Roman, Tahoma;
+    font-size: 0.7em;
+}
+
 .date {
     font-family: Monaco, monospace;
     font-size: 0.8em;
