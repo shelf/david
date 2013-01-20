@@ -205,7 +205,7 @@ article img {
     padding-bottom: 36px;
 }
 
-article ul,li {
+article ul, article li {
     list-style: disc outside none;
 }
 
