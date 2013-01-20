@@ -372,3 +372,18 @@ blockquote {
     font-size: 0.8em;
     padding-right: 15px;
 }
+
+.spoiler {
+    color: #000000 !important;
+    background-color: #000000 !important;
+}
+
+.spoiler:hover {
+    color: #222;
+    background-color: none;
+    -webkit-transition: background-color .2s ease; /* safari & chrome */
+    -moz-transition: background-color .2s ease; /* firefox */
+    -o-transition: background-color .2s ease; /* opera */
+    transition: background-color .2s ease; 
+
+}
