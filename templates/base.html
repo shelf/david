@@ -31,11 +31,22 @@
             <div class="container">
                 <nav>
                     {% if SITE_LOGO %} <img src="{{ SITE_LOGO }}"> {% endif %}
-                    <a href="{{ SITEURL }}">{{ SITENAME }}</a>
+
                     {% if SITES %}
-                        {% for name,link in SITES %}
-                            <a href="{{ link }}">{{ name }}</a>
-                        {% endfor %}
+                    <ul>
+                        <li>
+                            <a href="{{ SITEURL }}">{{ SITENAME }}</a>
+                            <ul>
+                                {% for name,link in SITES %}
+                                <li><div class="dropnavitem">
+                                <a href="{{ link }}">{{ name }}</a>
+                                </div></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+                    {% else %}
+                    <a href="{{ SITEURL }}">{{ SITENAME }}</a>
                     {% endif %}
                     {% if DISPLAY_PAGES_ON_MENU %}
                         {% for page in PAGES %}
