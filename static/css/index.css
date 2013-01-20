@@ -205,6 +205,10 @@ article img {
     padding-bottom: 36px;
 }
 
+article ul,li {
+    list-style: disc outside none;
+}
+
 #topbar h3 {
     margin-top: 0px;
     margin: 0;
