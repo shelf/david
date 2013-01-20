@@ -145,16 +145,6 @@ b {
     text-decoration: none;
 }
 
-.dropdown a, .dropdown a:hover, .dropdown a:active, .dropdown a:visited {
-    color: #FFFFFF !important;
-}
-
-.arrow {
-    font-size: 0.4em;
-    padding-right: 12px;
-    margin-top: 18px;
-}
-
 #topbar ul,li {
     margin: 0;
     padding: 0;
