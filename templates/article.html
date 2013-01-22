@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
 {% block headline %}
 <div id="byline">
   <h1><a class="hline" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
