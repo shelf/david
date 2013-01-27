@@ -16,6 +16,7 @@ body {
 #document h1,h2,h3,h4,h5,h6 {
     font-family: 'Bitter', 'Merriweather', 'Times New Roman', serif;
     font-weight: bolder;
+    color: #353535 !important;
 }
 
 b {
