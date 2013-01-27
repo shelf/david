@@ -13,12 +13,12 @@ body {
     font-weight: 300;
 }
 
-#document h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6 {
     font-family: 'Bitter', 'Merriweather', 'Times New Roman', serif;
     font-weight: bolder;
 }
 
-article h1,h2,h3,h4,h5,h6 a,a:hover,a:visited,a:active {
+article h1, article h2, article h3, article h4, article h5 {
     color: #353535 !important;
 }
 
